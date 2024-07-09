@@ -22,6 +22,8 @@ COPY mlReview .
 COPY models .
 COPY manage.py .
 
+RUN ls -la /code
+
 RUN ls -a
 RUN python manage.py migrate
 
