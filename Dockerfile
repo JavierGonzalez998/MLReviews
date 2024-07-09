@@ -18,11 +18,11 @@ RUN $VIRTUAL_ENV/bin/pip install --upgrade pip
 RUN $VIRTUAL_ENV/bin/pip install -r requirements.txt
 
 # Copia el código de la aplicación
-COPY conf/gunicorn_config.py /code/conf/gunicorn_config.py
-COPY app /code/app
-COPY mlReview /code/mlReview
-COPY models /code/models
-COPY manage.py /code/manage.py
+COPY backend/conf/gunicorn_config.py /code/conf/gunicorn_config.py
+COPY backend/app /code/app
+COPY backend/mlReview /code/mlReview
+COPY backend/models /code/models
+COPY backend/manage.py /code/manage.py
 
 # Lista los contenidos del directorio /code para verificación
 RUN ls -la /code

@@ -1,17 +1,19 @@
 version: '3'
 services:
   app:
-    build: .
+    build:
+      context: ./backend  # Contexto para el servicio de Django
     container_name: django
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
-      - /code
+      - ./backend:/code  # Mapeo del volumen específico para el código de Django
     ports:
       - "8000:8000"
+
   frontend:
-    build: .
+    build:
+      context: ./frontend  # Contexto para el servicio de frontend
     ports:
       - '3000:3000'
     environment:
       - NODE_ENV=production
-  
