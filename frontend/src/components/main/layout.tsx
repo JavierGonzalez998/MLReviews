@@ -15,7 +15,7 @@ export default function Layout(): React.JSX.Element {
     }
     return (
         <Box sx={style}>
-            <Typography variant='h5' textAlign="center" marginTop={2}>W@#! is my review?</Typography>
+            <Typography variant='h5' textAlign="center" marginTop={2}>What is my review?</Typography>
             <Container sx={{ mt: "5rem" }}>
                 <Stack direction="column">
                     <Typography variant="h6" textAlign="center">Este sitio te ayudará a validar y verificar que tu review sea positivo o negativo.</Typography>
