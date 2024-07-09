@@ -1,7 +1,6 @@
 .venv
 content
-.dvc
-.dvc/*
+!.dvc
 mlreview-firebase-adminsdk-4im9t-4cc945ff98.json
 models
 models/*
