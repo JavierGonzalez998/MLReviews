@@ -20,6 +20,7 @@ RUN python -m pip install -r requirements.txt
 COPY app .
 COPY mlReview .
 COPY models .
+COPY manage.py .
 
 RUN python manage.py migrate
 
