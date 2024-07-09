@@ -1,5 +1,5 @@
 # Usa una imagen base de Python
-FROM python:3.14-slim
+FROM python:3.12.4-slim-bookworm
 ENV PYTHONBUFFERED=1
 
 WORKDIR /code
