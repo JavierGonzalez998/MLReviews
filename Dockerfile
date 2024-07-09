@@ -22,6 +22,7 @@ COPY mlReview .
 COPY models .
 COPY manage.py .
 
+RUN ls -a
 RUN python manage.py migrate
 
 EXPOSE 8000
