@@ -14,9 +14,9 @@ RUN apt-get update -y && apt-get install -y git
 # Copia y instala las dependencias
 COPY requirements.txt .
 RUN python -m venv $VIRTUAL_ENV
+RUN . /code/.venv/bin/activate
 RUN $VIRTUAL_ENV/bin/pip install --upgrade pip
 RUN $VIRTUAL_ENV/bin/pip install -r requirements.txt
-RUN $VIRTUAL_ENV/bin/pip install django
 
 # Copia el código de la aplicación
 COPY conf/gunicorn_config.py /code/conf/gunicorn_config.py
