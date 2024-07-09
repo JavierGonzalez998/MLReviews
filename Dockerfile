@@ -1,19 +1,11 @@
 # Usa una imagen base de Python
-FROM python:3.12-slim
+FROM python:3.14-slim
 ENV PYTHONBUFFERED=1
 
 WORKDIR /code
 
 # Actualiza los paquetes del sistema e instala las dependencias necesarias
-RUN apt-get update -y && \
-    apt-get install -y \
-    ffmpeg \
-    build-essential \
-    default-libmysqlclient-dev \
-    pkg-config \
-    python3-dev \
-    gcc \
-    libmariadb-dev
+RUN apt-get update -y 
 
 RUN apt-get install -y git
 
